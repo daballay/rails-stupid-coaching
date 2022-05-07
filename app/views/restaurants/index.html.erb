@@ -1,0 +1,19 @@
+<h1>Aqui van nuestros Restaurantes</h1>
+<p>hora: <%time = Time.now %>
+<%= "#{time.hour}:#{time.min}" %></p>
+
+<% categorias = %w[rapida indian italian] %>
+<h2><%= "Conoce nuestras especialidades" %></h2>
+
+<ol>
+<% categorias.each do |categoria| %>
+<li><%= categoria.capitalize %></li>
+<% end %>
+</ol>
+
+<h2><%= "Conoce nuestros restaurantes" %></h2>
+<ol>
+<% @restaurants.each do |key, restaurant| %>
+<li><%= restaurant[:name]%></li>
+<% end %>
+</ol>
